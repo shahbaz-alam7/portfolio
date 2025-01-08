@@ -1,10 +1,9 @@
-"use client"
+'use client'
 
-import { useState, useEffect } from 'react'
+import { BookOpen, FileText, FolderGit2, Github, Home, Moon, Sun } from 'lucide-react'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 import { useTheme } from './theme-provider'
-import { colors } from '../config/theme'
-import { Home, FolderGit2, BookOpen, Github, FileText, Moon, Sun, Monitor } from 'lucide-react'
 
 const Header = () => {
   const { theme, setTheme } = useTheme()
@@ -27,17 +26,15 @@ const Header = () => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       })
     }
   }
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm' 
-          : 'bg-transparent'
+        isScrolled ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-6">
@@ -65,7 +62,7 @@ const Header = () => {
               <span>Experience</span>
             </button>
             <Link
-              href="https://github.com/yourusername"
+              href="https://github.com/shahbaz-alam7"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -74,7 +71,7 @@ const Header = () => {
               <span>Github</span>
             </Link>
             <a
-              href="/resume.pdf"
+              href="/assets/MohdShahbazAlamResume.pdf"
               download
               className="flex items-center space-x-2 text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
             >
@@ -82,18 +79,14 @@ const Header = () => {
               <span>Resume</span>
             </a>
           </div>
-          
+
           <button
             onClick={() => {
-              setTheme(theme === "dark" ? "light" : "dark")
+              setTheme(theme === 'dark' ? 'light' : 'dark')
             }}
             className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
           >
-            {theme === "dark" ? (
-              <Sun className="w-5 h-5" />
-            ) : (
-              <Moon className="w-5 h-5" />
-            )}
+            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
         </nav>
       </div>
@@ -102,4 +95,3 @@ const Header = () => {
 }
 
 export default Header
-

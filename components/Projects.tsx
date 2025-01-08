@@ -10,20 +10,20 @@ const Projects = () => {
       title: 'E-commerce Platform',
       description: 'A full-stack e-commerce solution built with Next.js, Node.js, and MongoDB.',
       image: '/placeholder.svg?height=400&width=600',
-      link: '#'
+      link: '#',
     },
     {
       title: 'Task Management App',
       description: 'A React-based task management application with Redux for state management.',
       image: '/placeholder.svg?height=400&width=600',
-      link: '#'
+      link: '#',
     },
     {
       title: 'Real-time Chat Application',
       description: 'A real-time chat app built with React, Node.js, and Socket.io.',
       image: '/placeholder.svg?height=400&width=600',
-      link: '#'
-    }
+      link: '#',
+    },
   ]
 
   return (
@@ -35,10 +35,7 @@ const Projects = () => {
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          <motion.h2 
-            variants={fadeIn}
-            className="text-5xl font-bold text-center mb-16"
-          >
+          <motion.h2 variants={fadeIn} className="text-5xl font-bold text-center mb-16">
             Featured Projects
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -75,4 +72,3 @@ const Projects = () => {
 }
 
 export default Projects
-

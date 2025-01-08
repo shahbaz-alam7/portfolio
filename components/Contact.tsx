@@ -13,19 +13,15 @@ const Contact = () => {
           viewport={{ once: true }}
           className="max-w-2xl mx-auto"
         >
-          <motion.h2 
-            variants={fadeIn}
-            className="text-5xl font-bold text-center mb-16"
-          >
+          <motion.h2 variants={fadeIn} className="text-5xl font-bold text-center mb-16">
             Get in Touch
           </motion.h2>
-          <motion.div
-            variants={fadeIn}
-            className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl"
-          >
+          <motion.div variants={fadeIn} className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl">
             <form className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  Name
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -35,7 +31,9 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  Email
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -45,7 +43,9 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -71,4 +71,3 @@ const Contact = () => {
 }
 
 export default Contact
-
