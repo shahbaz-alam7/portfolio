@@ -25,14 +25,12 @@ const Hero = () => {
               Crafting digital experiences with modern web technologies
             </motion.p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <motion.a
-                href="#contact"
-                className="inline-block bg-purple-600 text-white py-3 px-8 rounded-full font-bold hover:bg-purple-700 transition duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <a
+                href="mailto:alamshahbaz287@gmail.com"
+                className="inline-block cursor-pointer bg-purple-600 text-white py-3 px-8 rounded-full font-bold hover:bg-purple-700 transition duration-300"
               >
                 Get in Touch
-              </motion.a>
+              </a>
             </div>
           </motion.div>
           <motion.div
