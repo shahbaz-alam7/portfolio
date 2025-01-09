@@ -14,7 +14,6 @@ import {
   SiTailwindcss,
   SiRedux,
   SiGit,
-  SiVisualstudio,
   SiPostman,
   SiJira,
 } from 'react-icons/si'

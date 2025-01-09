@@ -7,22 +7,31 @@ import { fadeIn, staggerContainer } from '../utils/animations'
 const Projects = () => {
   const projects = [
     {
-      title: 'E-commerce Platform',
-      description: 'A full-stack e-commerce solution built with Next.js, Node.js, and MongoDB.',
-      image: '/placeholder.svg?height=400&width=600',
-      link: '#',
+      title: 'Energyhire',
+      description:
+        'Energy Hire is the hiring platform for businesses across all areas of the energy industry, from traditional sectors to renewables.Built in Next.js, Typescript .Net, and PostgresSQL.',
+      image: '/assets/energyhire.png?height=400&width=600',
+      link: 'https://dev.energyhire.com/job-board',
     },
     {
-      title: 'Task Management App',
-      description: 'A React-based task management application with Redux for state management.',
-      image: '/placeholder.svg?height=400&width=600',
-      link: '#',
+      title: 'Tava Cloud',
+      description:
+        'A React-based application to create collections of data, build web hooks and backend tasks, and automatically generate your API documentation. Tava makes it easier than ever.',
+      image: '/assets/tava_cloud.png',
+      link: 'https://tava.cloud/',
     },
     {
-      title: 'Real-time Chat Application',
-      description: 'A real-time chat app built with React, Node.js, and Socket.io.',
-      image: '/placeholder.svg?height=400&width=600',
-      link: '#',
+      title: 'Tava Trip',
+      description: 'A React-based application to book flight ticket and hotels with ease.',
+      image: '/assets/tava_trip.png',
+      link: 'https://www.tavatrip.com/',
+    },
+    {
+      title: 'EHS Prints',
+      description:
+        'EHS PRINTS, help the users to make something new, help of the tools, discovering their creativity, make posters and lot more',
+      image: '/assets/ehs_prints.png',
+      link: 'https://ehsprints.com/',
     },
   ]
 
@@ -43,7 +52,7 @@ const Projects = () => {
               <motion.div
                 key={index}
                 variants={fadeIn}
-                className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm"
+                className="group relative h-[480px] overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm"
               >
                 <Image
                   src={project.image}
@@ -57,7 +66,8 @@ const Projects = () => {
                   <p className="text-gray-300 mb-4">{project.description}</p>
                   <a
                     href={project.link}
-                    className="inline-block bg-purple-600 text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition duration-300"
+                    target="_blank"
+                    className="inline-block bg-purple-600 text-center text-white py-2 px-4 rounded-lg hover:bg-purple-700 transition duration-300"
                   >
                     View Project
                   </a>

@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { fadeIn, staggerContainer } from '../utils/animations'
 
 interface SkillBadgeProps {
@@ -16,22 +17,24 @@ const SkillBadge = ({ skill }: SkillBadgeProps) => (
 const Experience = () => {
   const experiences = [
     {
-      title: 'Full Stack Developer',
-      company: 'ePhilos AG',
-      period: 'Aug 2021 - Present · 2 years 8 months',
-      location: 'Bremen, Germany · Hybrid',
+      title: 'Software Development Engineer 1',
+      company: 'Innostax Software Labs Pvt LTD',
+      period: 'Feb 2023 - Present · 2 years',
+      logo: 'innostax_logo.jfif',
+      location: 'Gurugram, Haryana - On site',
       description:
-        'Responsible for the further development of Comfortmarkt (CM), a software based on PHP, Ext JS, Webix, and MySQL. Optimization of database queries and performance. Implementation of new features focusing on user-friendliness. Application of best practices in software development and code optimization. Conducting unit tests and collaborating on CI/CD processes.',
-      skills: ['PHP', 'Ext JS', 'Webix', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'Unit Testing'],
+        'Responsible for the development of Tava Cloud, a software based on React, Node Js, Express Js and MySQL. Optimization of database queries and performance. Implementation of new features focusing on user-friendliness. Application of best practices in software development and code optimization.',
+      skills: ['React JS', 'Node JS', 'Express JS', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
     },
     {
-      title: 'Web Developer',
-      company: 'Freelancer',
-      period: 'Mar 2020 - Jun 2021 · 1 year 4 months',
-      location: 'Remote - Morocco',
+      title: 'Web Developer-Intern',
+      company: 'Dichroic Labs LLP',
+      period: 'Sept 2022 - Jan 2023 · 4 months',
+      logo: 'dichroic_labs.png',
+      location: 'Remote - Bangalore, India',
       description:
-        'Development of responsive websites (HTML, CSS, Bootstrap, jQuery, WordPress). Customizations and SEO optimization. Close collaboration with clients to implement tailored solutions.',
-      skills: ['HTML', 'CSS', 'Bootstrap', 'jQuery', 'WordPress', 'SEO'],
+        'Development of responsive websites (HTML, CSS, Bootstrap, Node Js, Mongo DB). Customizations and made responsive. Close collaboration with clients to implement tailored solutions.',
+      skills: ['React JS', 'HTML', 'CSS', 'Bootstrap', 'Node JS', 'Mongo Db'],
     },
   ]
 
@@ -55,7 +58,16 @@ const Experience = () => {
                   <div className="absolute left-0 top-[6px] w-4 h-4 rounded-full bg-blue-600" />
                   <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 space-y-4">
                     <div>
-                      <h3 className="text-xl font-semibold">{exp.title}</h3>
+                      <div className="flex items-center gap-2">
+                        <Image
+                          width={40}
+                          height={40}
+                          className="w-10 h-10 rounded-full"
+                          src={`/assets/${exp.logo}`}
+                          alt="logo"
+                        />
+                        <h3 className="text-xl font-semibold">{exp.title}</h3>
+                      </div>
                       <p className="text-gray-400">{exp.company}</p>
                       <p className="text-sm text-gray-500">{exp.period}</p>
                       <p className="text-sm text-gray-500">{exp.location}</p>
@@ -82,32 +94,28 @@ const Experience = () => {
 const Education = () => {
   const education = [
     {
-      degree: 'Vocational Training in Application Development',
-      school: 'Schulzentrum SII Utbremen Bremen',
-      period: 'Aug 2021 - May 2024',
+      degree: 'Bachelors in Computer Application',
+      school: 'GRD group of Colleges, Ropar',
+      period: 'Aug 2019 - May 2022',
+      percentage: '8.86 CGPA',
       description:
         'Dual education: Theory and practice in Full Stack Development. Focus on modern web technologies and agile software development practices.',
-      skills: ['JavaScript', 'React', 'Node.js', 'SQL', 'Agile Methodologies'],
+      skills: [],
     },
     {
-      degree: 'Bachelor in Networks and Telecommunications',
-      school: "Université du Littoral Côte d'Opale",
-      period: 'Oct 2018 - Nov 2019',
+      degree: 'Intermediate (10 + 2)',
+      school: "St Paul's College, Moradabad",
+      period: 'June 2017 - May 2019',
+      percentage: '72.2%',
       description:
         'French state diploma focusing on network administration, IT security, and web development. Preparation for CISCO certifications (CCNA1 to CCNA4).',
-      skills: [
-        'Network Administration',
-        'IT Security',
-        'PHP',
-        'MySQL',
-        'Project Management',
-        'CISCO CCNA',
-      ],
+      skills: [],
     },
     {
-      degree: 'Training in Computer Development Techniques',
+      degree: 'High School (10)',
       school: 'OFPPT Ouarzazate',
-      period: 'Sep 2016 - Jul 2018',
+      percentage: '82.3%',
+      period: 'June 2016 - May 2017',
       description: 'Comprehensive training in computer development fundamentals and techniques.',
       skills: [],
     },
@@ -131,10 +139,13 @@ const Education = () => {
             <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 space-y-4">
               <div>
                 <h3 className="text-xl font-semibold">{edu.degree}</h3>
-                <p className="text-gray-400">{edu.school}</p>
+                <div className="flex items-center gap-5">
+                  <p className="text-gray-400">{edu.school}</p>
+                  <p className="text-gray-400">-{edu.percentage}</p>
+                </div>
                 <p className="text-sm text-gray-500">{edu.period}</p>
               </div>
-              <p className="text-gray-300">{edu.description}</p>
+              {/* <p className="text-gray-300">{edu.description}</p> */}
               {edu.skills.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {edu.skills.map((skill, skillIndex) => (

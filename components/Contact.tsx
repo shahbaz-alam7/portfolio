@@ -17,7 +17,7 @@ const Contact = () => {
             Get in Touch
           </motion.h2>
           <motion.div variants={fadeIn} className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl">
-            <form className="space-y-6">
+            <form className="space-y-6" data-netlify="true">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Name
