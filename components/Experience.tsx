@@ -113,7 +113,7 @@ const Education = () => {
     },
     {
       degree: 'High School (10)',
-      school: 'OFPPT Ouarzazate',
+      school: "St Paul's College, Moradabad",
       percentage: '82.3%',
       period: 'June 2016 - May 2017',
       description: 'Comprehensive training in computer development fundamentals and techniques.',
